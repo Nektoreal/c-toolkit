@@ -25,4 +25,5 @@ size_t	ft_strlen(const char *str)
 		length++;
 	}
 	return (length);
+	//test make
 }

@@ -9,7 +9,7 @@ TEST_SRCS = $(wildcard tests/test_*.c)
 TEST_OBJS = $(patsubst tests/%.c, bin/%.o, $(TEST_SRCS))
 
 TEST_BINS = $(patsubst tests/test_%.c, bin/test_%, $(TEST_SRCS))
-
+all: libft.a
 test: $(TEST_BINS)
 	$(foreach test, $(TEST_BINS), ./$(test);)
 
@@ -24,3 +24,23 @@ bin/ft_%.o: src/ft_%.c
 
 libft.a: $(OBJS)
 	ar rcs $@ $^
+
+.PHONY: all test clean fclean re help
+
+help:
+	@echo "Available targets:"
+	@echo " all"
+	@echo " test"
+	@echo " clean"
+	@echo " fclean"
+	@echo " re"
+
+clean:
+	rm -f $(OBJS) $(TEST_OBJS)
+
+fclean: clean
+	rm -f libft.a $(TEST_BINS)
+
+re: fclean
+	$(MAKE)
+
