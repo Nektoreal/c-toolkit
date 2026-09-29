@@ -41,6 +41,6 @@ int	main(void)
 		ERROR("ERROR: 'a'\n");
 		failed = 1;
 	}
-	//test make
+	//test
 	return (failed);
 }
