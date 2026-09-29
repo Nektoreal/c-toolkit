@@ -6,7 +6,7 @@ int	main(void)
 	int	failed;
 
 	failed = 0;
-	printf("%zu\n", ft_strlen("test"));
+	//printf("%zu\n", ft_strlen("test"));
 	if (ft_strlen("test") == 4)
 	{
 		printf("OK\n");
@@ -17,7 +17,7 @@ int	main(void)
 		failed = 1;
 	}
 
-	printf("%zu\n", ft_strlen(""));
+	//printf("%zu\n", ft_strlen(""));
 	if (ft_strlen("") == 0)
 	{
 		printf("OK\n");
@@ -28,7 +28,7 @@ int	main(void)
 		failed = 1;
 	}
 
-	printf("%zu\n", ft_strlen("a"));
+	//printf("%zu\n", ft_strlen("a"));
 	if (ft_strlen("a") == 1)
 	{
 		printf("OK\n");

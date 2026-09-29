@@ -6,7 +6,7 @@ int	main(void)
 	int	failed;
 
 	failed = 0;
-	printf("%d\n", ft_isalnum('a'));
+	//printf("%d\n", ft_isalnum('a'));
 	if (ft_isalnum('a') == 1)
 	{
 		printf("OK\n");
@@ -17,7 +17,7 @@ int	main(void)
 		failed = 1;
 	}
 
-	printf("%d\n", ft_isalnum('A'));
+	//printf("%d\n", ft_isalnum('A'));
 	if (ft_isalnum('A') == 1)
 	{
 		printf("OK\n");
@@ -28,7 +28,7 @@ int	main(void)
 		failed = 1;
 	}
 
-	printf("%d\n", ft_isalnum('1'));
+	//printf("%d\n", ft_isalnum('1'));
 	if (ft_isalnum('1') == 1)
 	{
 		printf("OK\n");
