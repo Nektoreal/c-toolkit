@@ -12,7 +12,7 @@ int	main(void)
 	//printf("%zu\n", ft_strlen("test"));
 	if (ft_strlen("test") == 4)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -23,7 +23,7 @@ int	main(void)
 	//printf("%zu\n", ft_strlen(""));
 	if (ft_strlen("") == 0)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -34,7 +34,7 @@ int	main(void)
 	//printf("%zu\n", ft_strlen("a"));
 	if (ft_strlen("a") == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{

@@ -10,7 +10,7 @@ int	main(void)
 	INFO("TEST test_isascii.c\n");
 	if (ft_isascii(0) == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -20,7 +20,7 @@ int	main(void)
 
 	if (ft_isascii(127) == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -30,7 +30,7 @@ int	main(void)
 
 	if (ft_isascii('A') == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -40,7 +40,7 @@ int	main(void)
 
 	if (ft_isascii('6') == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -49,7 +49,7 @@ int	main(void)
 	}
 	if (ft_isascii(128) == 0)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{

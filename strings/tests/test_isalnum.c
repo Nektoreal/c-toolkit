@@ -11,7 +11,7 @@ int	main(void)
 	//printf("%d\n", ft_isalnum('a'));
 	if (ft_isalnum('a') == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -22,7 +22,7 @@ int	main(void)
 	//printf("%d\n", ft_isalnum('A'));
 	if (ft_isalnum('A') == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{
@@ -33,7 +33,7 @@ int	main(void)
 	//printf("%d\n", ft_isalnum('1'));
 	if (ft_isalnum('1') == 1)
 	{
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	}
 	else
 	{

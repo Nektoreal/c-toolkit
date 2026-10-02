@@ -9,39 +9,54 @@ int	main(void)
 	failed = 0;
 	INFO("TEST test_isprint.c\n");
 	if (ft_isprint('A'))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
+	{
 		ERROR("ERROR: 'A'\n");
-
+		failed = 1;
+	}
 	if (ft_isprint('a'))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
+	{
 		ERROR("ERROR: 'a'\n");
+		failed = 1;
+	}
 
 	if (ft_isprint('1'))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
+	{
 		ERROR("ERROR: '1'\n");
-
+		failed = 1;
+	}
 	if (ft_isprint('@'))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
+	{
 		ERROR("ERROR: '@'\n");
-
+		failed = 1;
+	}
 	if (ft_isprint('/'))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
+	{
 		ERROR("ERROR: '/'\n");
-
+		failed = 1;
+	}
 	if (ft_isprint('\\'))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
-	ERROR("ERROR: '\\'\n");
-
+	{
+		ERROR("ERROR: '\\'\n");
+		failed = 1;
+	}
 	if (ft_isprint(' '))
-		SUCCESS("OK\n");
+		SUCCESS("[ OK ]\n");
 	else
+	{
 		ERROR("ERROR: ' '\n");
-
+		failed = 1;
+	}
 	return(failed);
 }
