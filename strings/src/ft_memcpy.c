@@ -14,12 +14,15 @@
 */
 #include "string.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*d = (char *) dest;
-	const char	*s = (const char *) src;
-	size_t	i = 0;
+	char		*d;
+	const char	*s;
+	size_t		i;
 
+	i = 0;
+	s = (const char *) src;
+	d = (char *) dest;
 	while (i < n)
 	{
 		d[i] = s[i];

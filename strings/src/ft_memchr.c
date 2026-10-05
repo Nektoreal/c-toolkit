@@ -13,20 +13,20 @@
 	scans the initial n bytes of the memory area
 	pointed to by s for the first instance of c.
 */
-
 #include "string.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char *src = (const unsigned char *)s;
-	size_t	i;
+	size_t				i;
+	const unsigned char	*src = (const unsigned char *)s;
 
 	i = 0;
 	while (i < n)
 	{
 		if (src[i] == (unsigned char)c)
-			return((void *)&src[i]); // s + i the same
+			return ((void *)&src[i]);
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }
+// s + i the same line 27

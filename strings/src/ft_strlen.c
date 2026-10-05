@@ -6,7 +6,7 @@
 /*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 12:47:45 by Nektoreal         #+#    #+#             */
-/*   Updated: 2026/09/21 12:47:45 by Nektoreal        ###   ########.fr       */
+/*   Updated: 2026/10/05 14:24:29 by okoliada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -25,5 +25,4 @@ size_t	ft_strlen(const char *str)
 		length++;
 	}
 	return (length);
-	//test
 }

@@ -28,12 +28,16 @@ libft.a: $(OBJS)
 .PHONY: all test clean fclean re help
 
 help:
-	@echo "Available targets:"
+	@echo "Available commands:"
 	@echo " all"
 	@echo " test"
 	@echo " clean"
 	@echo " fclean"
 	@echo " re"
+	@echo " norm"
+
+norm:
+	norminette -R checkForbiddenSources src
 
 clean:
 	rm -f $(OBJS) $(TEST_OBJS)
