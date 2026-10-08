@@ -1,5 +1,5 @@
 #ifndef LIBFT_H
-# define LIBFT_H 
+# define LIBFT_H
 //check if header is defined
 //, if not try to define
 # include <stddef.h> // defines common types and macros (IDK)
