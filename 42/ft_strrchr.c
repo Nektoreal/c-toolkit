@@ -12,6 +12,8 @@
 /*
 	returns a pointer to the last occurrence of the char c in string s
 */
+#include "libft.h"
+#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -22,15 +24,24 @@ char	*ft_strrchr(const char *s, int c)
 	last_char = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char) c)
 		{
 			last_char = i;
 		}
 		i++;
 	}
-	if (c == '\0')
-		return (s + i);
 	if (last_char == 0)
-		return (NULL);
-	return (s + last_char);
+		return NULL;
+	if ((unsigned char) c == '\0')
+		return ((char *) s + i);
+	return ((char *) s + last_char);
 }
+/*
+int	main(void)
+{
+	const char *str = "I did not hit her. I did not! Oh hi Mark.\0";
+	char c = 'c';
+	printf("%s\n", ft_strrchr(str, c)?ft_strrchr(str, c):"ERROR! = NULL");
+	return (0);
+}
+ */

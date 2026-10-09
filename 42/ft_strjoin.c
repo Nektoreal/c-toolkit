@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 /*
- *
+	Allocates (with malloc(3)) and returns a new string,
+	which is the result of the concatenation of s1 and
+	s2.
  */
 #include <stdio.h>
 
@@ -25,6 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	//copy all to one str
 	//maybe use just strcpy or samething similar
+	//f maybe strlcat need to check
 	str[size + 1] = '\0';
 	return (str);
 }

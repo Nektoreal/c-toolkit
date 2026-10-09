@@ -13,7 +13,8 @@
 
 */
 #include <stdio.h>
-#include <string.h>
+//#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -42,7 +43,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return NULL;
 }
 
-int	main(void)
+/* int	main(void)
 {
 	const char *big = "abcdefde\0";
 	const char *little = "de\0";
@@ -53,3 +54,4 @@ int	main(void)
 	printf("expected : %s", expected);
 	printf("actual : %s", actual);
 }
+ */

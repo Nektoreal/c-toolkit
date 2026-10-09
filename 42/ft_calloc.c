@@ -14,21 +14,35 @@
 	if size is 0, unique pointer value that can be free
 */
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
+#include "libft.h"
 void	*ft_calloc(size_t n, size_t size)
 {
 	char *ptr;
-	size_t	i;
+	size_t	sum;
 
-	i = 0;
+	sum = n * size;
 	if (n == 0 || size == 0) // create check for max and min
 	{
-		return NULL;
+		ptr = malloc(sizeof(char));
+		return ptr;
 	}
-	ptr = malloc(size * n);
-	if (!ptr)
+	ptr = malloc(sizeof(char) * sum);
+	if (ptr == NULL)
 		return NULL;
 
-	ptr = memset(ptr, 0, size * n);
+	ptr = ft_memset(ptr, 0, sum);
 	return (ptr);
 }
+
+/* int	main(void)
+{
+	char *str;
+
+	str = ft_calloc(2,5);
+	if (str == NULL)
+		return (1);
+	printf("%s", str);
+	return (0);
+}
+ */

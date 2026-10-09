@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 /*
- *
+	Allocates (with malloc(3)) and returns a substring
+	from the string s.
+	The substring begins at index start and is of
+	maximum size len.
  */
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -20,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 
 	str = malloc(sizeof(char) * len + 1);
-	ft_strlcpy(str, s, len);
+	ft_strlcpy(str, s, len); //need to check if it works with this func
 	str[len + 1] = '\0';
 	return (str);
 }
