@@ -3,6 +3,11 @@
 //check if header is defined
 //, if not try to define
 # include <stddef.h> // defines common types and macros (IDK)
+#include <unistd.h>
+
+#include <stdlib.h>
+
+#include <stdio.h>
 //all func prototype
 size_t	ft_strlen(const char *str);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
@@ -30,6 +35,11 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	ft_bzero(void *s, size_t n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *str, int fd);
+void	ft_putendl_fd(char *str, int fd);
+void	ft_putendl_fd(char *str, int fd);
+void	ft_striteri(char *str, void (*f)(unsigned int, char *));
 
 void	*ft_calloc(size_t n, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
