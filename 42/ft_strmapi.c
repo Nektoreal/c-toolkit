@@ -12,12 +12,12 @@
 
 #include "libft.h"
 //test
-char	change_char(unsigned int i, char c)
+/* char	change_char(unsigned int i, char c)
 {
 	(void)i;
 	//*c = *c + 1;
 	return (c + 1);
-}
+} */
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
@@ -42,7 +42,7 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	return (res);
 }
 
-//tests
+/* //tests
 int	main(void)
 {
 	char	str[] = "abc";
@@ -61,4 +61,4 @@ int	main(void)
 	write(1, "\n", 1);
 	free(res);
 	return (0);
-}
+} */
