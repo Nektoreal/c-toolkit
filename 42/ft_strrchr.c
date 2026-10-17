@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 19:14:30 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/07 19:14:32 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:09:10 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /*
 	returns a pointer to the last occurrence of the char c in string s
 */
@@ -31,7 +32,7 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (last_char == 0)
-		return NULL;
+		return (NULL);
 	if ((unsigned char) c == '\0')
 		return ((char *) s + i);
 	return ((char *) s + last_char);

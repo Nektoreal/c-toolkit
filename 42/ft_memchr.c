@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 19:19:30 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/07 19:19:31 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:01:29 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /*
 	scans the initial n bytes of the memory area s to the first instance of c;
 */
@@ -17,15 +18,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	unsigned char *src;
+	size_t			i;
+	unsigned char	*src;
 
 	i = 0;
 	src = (unsigned char *)s;
 	while (i < n && src[i])
 	{
 		if (src[i] == c)
-			return((unsigned char *)s + i);
+			return ((unsigned char *)s + i);
 		i++;
 	}
 }

@@ -3,29 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:20:47 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/08 12:20:48 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:08:47 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
 
-*/
 #include <stdio.h>
-//#include <string.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i, j;
-	int	little_len;
+	size_t	i;
+	size_t	j;
+	int		little_len;
 
 	i = 0;
 	j = 0;
-	little_len = strlen(little); // edit to ft_strlen.c
+	little_len = strlen(little);
 	if (little[0] == '\0')
-		return (char *) big;
+		return ((char *) big);
 	while (i < len && big[i])
 	{
 		if (big[i] == little[j])
@@ -37,10 +35,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		printf("check j = %d\n", j);
 		if (little_len == j)
-				return (char *)big + i;
+			return ((char *)big + i);
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
 
 /* int	main(void)

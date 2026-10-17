@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 19:04:08 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/09 19:04:09 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:28:30 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ int	size(long n)
 	int	i;
 
 	i = 0;
-
 	if (n < 0)
+	{
 		sign = 1;
 		n *= -1;
-	while(n > 0)
+	}
+	while (n > 0)
 	{
 		n /= 10;
 		i++;
 	}
 	return (i);
-
 }
 
-char *convert_to_str(char *str, long n_cpy, int i)
+char	*convert_to_str(char *str, long n_cpy, int i)
 {
 	if (n_cpy == 0)
 	{
@@ -53,7 +53,28 @@ char *convert_to_str(char *str, long n_cpy, int i)
 }
 
 char	*ft_itoa(int n)
-{/*
+{
+	char	*str;
+	int		i;
+	long	n_cpy;
+
+	n_cpy = n;
+	i = size(n_cpy);
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (!str)
+		return (NULL);
+	str[i--] = '\0';
+	return (convert_to_str(str, n_cpy, i));
+}
+/* int	main(void)
+{
+	int n = -1234;
+	char *str = ft_itoa(n);
+
+	printf("str = %s\n", str);
+	return (0);
+} */
+/*
 	char	*str;
 	int		number_size;
 	size_t	size;
@@ -90,24 +111,3 @@ char	*ft_itoa(int n)
 	}
 	str[i] = '\0';
 	return (str); */
-
-	char	*str;
-	int		i;
-	long	n_cpy;
-	n_cpy = n;
-	i = size(n_cpy);
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	if (!str)
-		return(NULL);
-	str[i--] = '\0';
-	return (convert_to_str(str, n_cpy, i));
-}
-
-int	main(void)
-{
-	int n = -1234;
-	char *str = ft_itoa(n);
-
-	printf("str = %s\n", str);
-	return (0);
-}

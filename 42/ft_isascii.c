@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 16:37:26 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/06 16:37:27 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:25:25 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /*
 	check c is a into as ascii character set
 */

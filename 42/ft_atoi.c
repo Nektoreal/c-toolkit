@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:28:09 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/08 14:28:10 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:23:52 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /*
 	converts portion of string pointed nptr to int. atoi does not detect errors
 	1. check if string starts with '-'
 	2. somehow check from wich base convert for atoi its 10 decimal
 	3. convert from decimal to char
-
 */
 #include <stdio.h>
 
@@ -32,15 +32,13 @@ int	ft_atoi(const char *nptr)
 		pos++;
 		sign = -1;
 	}
-
-	while (nptr[pos])qq
+	while (nptr[pos])
 	{
-		num = num*10 + (nptr[pos] - '0');
+		num = num * 10 + (nptr[pos] - '0');
 		pos++;
 	}
-	return num * sign;
+	return (num * sign);
 }
-
 /* int	main(void)
 {
 	char c = '5';

@@ -15,7 +15,7 @@
 unsigned int	ft_lstsize(t_list *lst)
 {
 	unsigned int	size;
-	t_list 			*current_node;
+	t_list			*current_node;
 
 	size = 0;
 	current_node = lst;
@@ -27,7 +27,7 @@ unsigned int	ft_lstsize(t_list *lst)
 	return (size);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	t_list	*head;
 	t_list	*first;
@@ -57,5 +57,4 @@ int	main(void)
 	free(second);
 	free(third);
 	return (0);
-}
-
+} */

@@ -31,7 +31,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 }
 
-int	main(void)
+/* int	main(void)
 {
 	t_list	*head;
 	t_list	*first;
@@ -55,4 +55,4 @@ int	main(void)
 	free(second);
 	free(last);
 	return (0);
-}
+} */

@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okoliada <okoliada@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: Nektoreal <koladaoleg384@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:02:30 by okoliada          #+#    #+#             */
-/*   Updated: 2026/10/08 12:02:31 by okoliada         ###   ########.fr       */
+/*   Updated: 2026/10/17 13:02:19 by Nektoreal        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-	compares the first n bytes (each interreted as unsigned char) of memareas s1 and s2
 
+/*
+	compares the first n bytes
+	(each interreted as unsigned char) of memareas s1 and s2
 */
 #include <stdio.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	sum;
-	size_t	i;
-	unsigned char *str1;
-	unsigned char *str1;
+	int				sum;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str1;
 
 	sum = 0;
 	i = 0;

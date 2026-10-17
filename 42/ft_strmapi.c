@@ -21,13 +21,12 @@
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-	char	*res;
-	size_t	len;
+	char			*res;
+	size_t			len;
 	unsigned int	index;
 
 	if (!str || !f)
 		return (NULL);
-
 	index = 0;
 	len = ft_strlen(str);
 	res = malloc(sizeof(char) * (len + 1));

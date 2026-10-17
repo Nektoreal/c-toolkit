@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd((nb % 10) + '0', fd);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	ft_putnbr_fd(0, 1);
 	ft_putchar_fd('\n', 1);
@@ -51,4 +51,4 @@ int	main(void)
 	ft_putnbr_fd(-2147483648, 1);
 	ft_putchar_fd('\n', 1);
 	return (0);
-}
+} */
