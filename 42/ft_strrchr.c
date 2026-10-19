@@ -31,10 +31,10 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		i++;
 	}
-	if (last_char == -1)
-		return (NULL);
 	if ((unsigned char) c == '\0')
 		return ((char *) s + i);
+	if (last_char == -1)
+		return (NULL);
 	return ((char *) s + last_char);
 }
 
@@ -44,11 +44,10 @@ char	*ft_strrchr(const char *s, int c)
 	char s2[] = "ltripouiel";
 	char s3[] = "";
 
-	if (ft_strrchr(s, 't') == s)
-		printf("good");
+	if (ft_strrchr(s, '\0') == s + 10)
+		printf("good\n");
 	else
-		printf("bad");
+		printf("bad\n");
 	printf("%s", ft_strrchr(s, 't'));
 	return (0);
-}
- */
+} */
