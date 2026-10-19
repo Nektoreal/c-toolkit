@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	last_char = 0;
+	last_char = -1;
 	while (s[i])
 	{
 		if (s[i] == (unsigned char) c)
@@ -31,18 +31,24 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		i++;
 	}
-	if (last_char == 0)
+	if (last_char == -1)
 		return (NULL);
 	if ((unsigned char) c == '\0')
 		return ((char *) s + i);
 	return ((char *) s + last_char);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
-	const char *str = "I did not hit her. I did not! Oh hi Mark.\0";
-	char c = 'c';
-	printf("%s\n", ft_strrchr(str, c)?ft_strrchr(str, c):"ERROR! = NULL");
+	char s[] = "tripouille";
+	char s2[] = "ltripouiel";
+	char s3[] = "";
+
+	if (ft_strrchr(s, 't') == s)
+		printf("good");
+	else
+		printf("bad");
+	printf("%s", ft_strrchr(s, 't'));
 	return (0);
 }
  */

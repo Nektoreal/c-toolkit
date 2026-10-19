@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return (str + i);
 		i++;
 	}
@@ -33,14 +33,21 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/* int	main(void)
+/*  int	main(void)
 {
-	char *str = "this is your captain speaking";
+	 char *str = "this is your captain speaking";
 	char *c;
 
 	c = ft_strchr(str, 'p');
 	printf("char was : 'p'\n");
 	printf("orig str: %s\n", str);
 	printf("found :%s\n", c);
+
+	char s[] = "tripouille";
+	if (ft_strchr(s, 't' + 256) == s)
+		printf("good");
+	else
+		printf("bad");
 	return (0);
 } */
+

@@ -15,6 +15,7 @@
 	(each interreted as unsigned char) of memareas s1 and s2
 */
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -27,10 +28,22 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (i < n && (str1[i] || str2[i]))
+	while (i < n)
 	{
-		sum += str1[i] - str2[i];
+		sum += (str1[i] - str2[i]);
 		i++;
 	}
 	return (sum);
 }
+
+/* int	main(void)
+{
+	char s2[] = {0, 0, 127, 0};
+	char s3[] = {0, 0, 42, 0};
+
+	if (ft_memcmp(s2, s3, 4) != 0)
+		printf("good");
+	else
+		printf("bad");
+	return (0);
+} */
