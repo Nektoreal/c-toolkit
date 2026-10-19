@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	int				sum;
 	size_t			i;
 	unsigned char	*str1;
-	unsigned char	*str1;
+	unsigned char	*str2;
 
 	sum = 0;
 	i = 0;

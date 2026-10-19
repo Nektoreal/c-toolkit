@@ -10,30 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	int		little_len;
+	size_t	little_len;
 
 	i = 0;
 	j = 0;
-	little_len = strlen(little);
+	little_len = ft_strlen(little);
 	if (little[0] == '\0')
 		return ((char *) big);
 	while (i < len && big[i])
 	{
 		if (big[i] == little[j])
 		{
-			while (big[i + j] == little[j] && little[j])
+			while (little[j] && big[i + j] == little[j])
 			{
 				j++;
 			}
 		}
-		printf("check j = %d\n", j);
 		if (little_len == j)
 			return ((char *)big + i);
 		i++;
@@ -44,12 +44,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /* int	main(void)
 {
 	const char *big = "abcdefde\0";
-	const char *little = "de\0";
+	const char *little = "\0";
 
-	char *expected;
+	//char *expected;
 	char *actual = ft_strnstr(big, little, 5);
-	expected = strnstr(big, little, 5);
-	printf("expected : %s", expected);
-	printf("actual : %s", actual);
-}
- */
+	//expected = ft_strnstr(big, little, 5);
+	printf("expected : abcdefdede\n");
+	printf("actual : %s\n", actual);
+} */
+

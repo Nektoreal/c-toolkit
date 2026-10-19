@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 /*
 	Allocates (with malloc(3)) and returns a copy of s1
 	with the characters specified in set removed from
 	the beginning and the end of the string.
 */
-/* int	check_set(const char c, char const *set)
+static int	check_set(const char c, char const *set)
 {
 	int	i;
 
@@ -24,9 +26,10 @@
 	{
 		if (c == set[i])
 			return (1);
+		i++;
 	}
 	return (0);
-} */
+}
 static char	*empty_string(void)
 {
 	char	*str;
@@ -57,9 +60,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	sublen = j - i + 1;
 	trimmed = (char *)malloc(sizeof(char) * (sublen + 1));
-	if (!trimmed)
+	if (trimmed == NULL)
 		return (NULL);
 	ft_memcpy(trimmed, s1 + i, sublen);
 	trimmed[sublen] = '\0';
 	return (trimmed);
 }
+
+/* int	main(void)
+{
+	char *str = ft_strtrim("   xxxtripouille", " x");
+	printf("orig str:   xxxtripouille\n");
+	printf("trimmed str: %s\n", str);
+	return (0);
+}
+ */

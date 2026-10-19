@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	del_content(void *content)
+/* void	del_content(void *content)
 {
 	free(content);
 }
@@ -29,7 +29,7 @@ void	*map_content(void *content)
 	res[0] = src[0] + 1;
 	res[1] = '\0';
 	return (res);
-}
+} */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

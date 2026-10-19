@@ -15,7 +15,7 @@
 /* char	change_char(unsigned int i, char c)
 {
 	(void)i;
-	//*c = *c + 1;
+	c = *c + 1;
 	return (c + 1);
 } */
 

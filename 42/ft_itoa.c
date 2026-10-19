@@ -21,7 +21,6 @@ int	size(long n)
 	i = 0;
 	if (n < 0)
 	{
-		sign = 1;
 		n *= -1;
 	}
 	while (n > 0)
@@ -36,7 +35,7 @@ char	*convert_to_str(char *str, long n_cpy, int i)
 {
 	if (n_cpy == 0)
 	{
-		str[0] == '0';
+		str[0] = '0';
 		return (str);
 	}
 	if (n_cpy < 0)
@@ -66,6 +65,7 @@ char	*ft_itoa(int n)
 	str[i--] = '\0';
 	return (convert_to_str(str, n_cpy, i));
 }
+
 /* int	main(void)
 {
 	int n = -1234;

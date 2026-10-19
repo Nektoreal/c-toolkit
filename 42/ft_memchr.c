@@ -23,23 +23,36 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	src = (unsigned char *)s;
-	while (i < n && src[i])
+	printf("src: %s\n", src);
+	while (src[i] && i < n)
 	{
-		if (src[i] == c)
+		if (src[i] == (unsigned char)c)
 			return ((unsigned char *)s + i);
 		i++;
 	}
+	return (NULL);
 }
 
-/* int	main(void)
+int	main(void)
 {
-	const char *str = "Help me pls!\0";
+	/* const char *str = "Help me pls!\0";
 
-	char c = 'm';
+	char c = 'H';
 
-	size_t n = 13;
+	size_t n = 1;
 
-	printf(ft_memchr(str, c, n));
+	printf(ft_memchr(str, c, n)); */
+
+	const char s[] = {0, 1, 2 ,3 ,4 ,5};
+	printf(ft_memchr(s, 1, 2));
+	if (ft_memchr(s, 1, 2) == NULL)
+		printf("Wow! Hier is...nothing?\n");
+		if (s[0] == 0)
+		{
+			printf("True\n");
+			printf("%d\n", *(s + 0));
+		}else{
+			printf("False\n");
+		}
 	return (0);
 }
- */
