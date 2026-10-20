@@ -16,7 +16,7 @@ int main(void)
 {
 	signal(SIGSEGV, sigsegv);
 	title("ft_strncmp\t: ")
-	
+
 	/* 1 */ check(ft_strncmp("t", "", 0) == 0); showLeaks();
 	/* 2 */ check(ft_strncmp("1234", "1235", 3) == 0); showLeaks();
 	/* 3 */ check(ft_strncmp("1234", "1235", 4) < 0); showLeaks();

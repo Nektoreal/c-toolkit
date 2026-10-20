@@ -25,25 +25,33 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*str1;
 	unsigned char	*str2;
 	size_t			i;
-	int				sum;
 
 	i = 0;
-	sum = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (i < n && (str1[i] || str2[i]))
+	if ((long)n <= 0)
+		return (n);
+	while (i < n && str1[i] && (str1[i] == str2[i]))
 	{
-		sum += str1[i] - str2[i];
 		i++;
 	}
-	return (sum);
+	if (i == n)
+		return (0);
+	return (str1[i] - str2[i]);
 }
+//printf("str1[i] : %c\n", str1[i]);
+//printf("str2[i] : %c\n", str2[i]);
+//printf("sum is :%d\n", sum);
 /*
 int	main(void)
 {
-	char *s1 = "ABC\0";
-	char *s2 = "AB\0";
+	//char *s1 = "ABC\0";
+	//char *s2 = "AB\0";
 
-	int result = ft_strncmp(s1, s2, 4);
-	printf("result is : %d\n", result);
-} */
+	//int result = ft_strncmp(s1, s2, 4);
+	//printf("result is : %d\n", result);
+	printf("result : %d\n" ,ft_strncmp("1234", "1235", -1));
+	//check(ft_strncmp("Tripouille", "TripouilleX", 42) < 0); showLeaks();
+	return (0);
+}
+*/
