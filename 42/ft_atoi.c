@@ -17,6 +17,7 @@
 	3. convert from decimal to char
 */
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -27,12 +28,39 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	num = 0;
 	pos = 0;
-	if (nptr[pos] == '-')
+	/* while (nptr[pos] != '\0')
 	{
+		if (ft_isprint(nptr[pos]))
+		{
+			if (nptr[pos] == '-' && ft_isdigit(nptr[pos + 1]))
+			{
+				pos++;
+				sign = -1;
+			}
+			//printf("TRAP1\n");
+			while (ft_isdigit(nptr[pos]))
+			{
+				num = num * 10 + (nptr[pos] - '0');
+				pos++;
+			}
+			return (num * sign);
+		}
 		pos++;
-		sign = -1;
 	}
-	while (nptr[pos])
+	return (sign * num); */
+	//!ft_isdigit(nptr[pos]) ||
+	//printf("%c\n" ,nptr[pos + 1]);
+	while (!ft_isprint(nptr[pos]))
+		pos++;
+	//printf("%d\n", pos);
+	if (nptr[pos] == '-' && ft_isdigit(nptr[pos + 1]))
+	{
+		sign = -1;
+		pos++;
+	}
+	if (nptr[pos] == '+')
+		pos++;
+	while (ft_isdigit(nptr[pos]))
 	{
 		num = num * 10 + (nptr[pos] - '0');
 		pos++;
@@ -41,12 +69,12 @@ int	ft_atoi(const char *nptr)
 }
 /* int	main(void)
 {
-	char c = '5';
-	int char_to_int = c - '0';
-	printf("%d", char_to_int);
+	//char c[] = "\n\ta4";
+	//int char_to_int = c - '0';
+	//printf("ctoi: %d\n", char_to_int);
 
-	const char *nptr = "-1234\0";
-	int output = ft_atoi(nptr);
+	char escape_with_one[] = {9, 10, 11, 12, 13, '-', 'a' ,'1', 0};
+	//const char *nptr = "1";
+	int output = ft_atoi(escape_with_one);
 	printf("output: %d\n", output);
-}
- */
+} */

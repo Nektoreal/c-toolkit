@@ -25,31 +25,51 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_len = ft_strlen(little);
 	if (little[0] == '\0')
 		return ((char *) big);
-	while (i < len && big[i])
+	while (big[i] && i < len)
 	{
+		//printf("itter : %d\n", i);
 		if (big[i] == little[j])
 		{
-			while (little[j] && big[i + j] == little[j])
+			while (little[j] && (i + j) < len && big[i + j] == little[j])
 			{
+				//printf("little[j] : %c\n", little[j]);
 				j++;
+				//printf("j: %d\n", j);
+				//printf("i: %d\n", i);
 			}
+			//printf("j: %d\n", j);
+			if (little_len != j)
+				j = 0;
 		}
+		//printf("after j : %d\n", j);
+		//printf("after len : %d\n", little_len);
 		if (little_len == j)
 			return ((char *)big + i);
 		i++;
 	}
 	return (NULL);
 }
-
-/* int	main(void)
+/*
+int	main(void)
 {
 	const char *big = "abcdefde\0";
-	const char *little = "\0";
+	const char *little = "de";
 
 	//char *expected;
-	char *actual = ft_strnstr(big, little, 5);
+	char *actual = ft_strnstr(big, little, 9);
 	//expected = ft_strnstr(big, little, 5);
-	printf("expected : abcdefdede\n");
+	printf("expected : defde\n");
 	printf("actual : %s\n", actual);
-} */
 
+	//check(ft_strnstr(haystack, "cd", 8) == NULL); showLeaks();
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+	char * empty = (char*)"";
+
+	char *actual = ft_strnstr(haystack, "cd", 8);
+	printf("expected : %s\n", NULL);
+	printf("actual : %s\n", actual);
+
+	return (0);
+}
+ */

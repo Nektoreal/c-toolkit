@@ -26,10 +26,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	//len = (size - dst_len) + dst_len;
 	j = dst_len;
 	i = 0;
-	printf("src %ld\n", src_len);
+	/* printf("src %ld\n", src_len);
 	printf("dst %ld\n", dst_len);
 	printf("size %ld\n", size);
-	printf("%s\n", dst);
+	printf("%s\n", dst); */
 	if (size <= 0)
 		return (src_len);
 	if (size <= dst_len)
