@@ -22,19 +22,31 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
+	size_t	src_len;
 
-	str = malloc(sizeof(char) * len + 1);
-	ft_strlcpy(str, s + start, len);
-	str[len + 1] = '\0';
+	src_len = ft_strlen(s);
+	if (start > src_len)
+	{
+		str = malloc(sizeof(char));
+		str[0] = '\0';
+		return (str);
+	}
+	if (start + len > src_len)
+		len = src_len - start;
+	str = malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
 
 /* int	main(void)
 {
-	char *str = "Hello cap\0";
-	char *substr = ft_substr(str, 3, 9);
+	char *str = "0123456789";
+	char *s = ft_substr(str, 9, 10);
 
 	printf("orig srt: %s\n", str);
-	printf("substr: %s\n", substr);
+	printf("substr: %s\n", s);
 	return (0);
 } */
+//start + length > src_len

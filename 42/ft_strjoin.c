@@ -28,8 +28,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	size = ft_strlen(s1) + ft_strlen(s2);
 	str = malloc(sizeof(char) * size + 1);
-	if (!str)
+	ft_memset(str, '\0', size + 1);
+	if (str == NULL)
 		return (NULL);
-	str[size + 1] = '\0';
+	ft_strlcat(str, s1, size + 1);
+	ft_strlcat(str, s2, size + 1);
 	return (str);
 }
+
+/* int	main(void)
+{
+	char *s1 = "Hello";
+	char *s2 = "World";
+	char *str;
+
+	str = ft_strjoin("tripouille", "42");
+	printf("str : %s\n", str);
+}
+ */

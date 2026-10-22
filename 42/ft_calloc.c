@@ -23,26 +23,47 @@ void	*ft_calloc(size_t n, size_t size)
 	char	*ptr;
 	size_t	sum;
 
-	sum = n * size;
-	if (n == 0 || size == 0)
+	//printf("n : %d || size : %zu\n", (int)n, size);
+	if ((int)n <= 0 || (int)size <= 0)
 	{
-		ptr = malloc(sizeof(char));
-		return (ptr);
+		//printf("TRAP to 0\n");
+		if (n == 0 || size == 0)
+		{
+			ptr = malloc(sizeof(char));
+			if (ptr == NULL)
+				return (NULL);
+			return (ptr);
+		}
+		else
+		//printf("TRAP to NULL ret\n");
+			return (NULL);
 	}
+	//printf("TRAP to CONT\n");
+	if ((size > 1073741823 && n > 2) || (n > 1073741823 && size > 2))
+		return (NULL);
+	//printf("TRAP to CONT after int max\n");
+	sum = n * size;
+	//printf("sum : %d\n", sum);
 	ptr = malloc(sizeof(char) * sum);
 	if (ptr == NULL)
+	{
+		//printf("ret null\n");
 		return (NULL);
+	}
 	ptr = ft_memset(ptr, 0, sum);
+	//printf("ptr = %s\n", ptr);
 	return (ptr);
 }
 /* int	main(void)
 {
 	char *str;
 
-	str = ft_calloc(2,5);
+	str = ft_calloc(2,2);
 	if (str == NULL)
+	{
+		printf("NULL\n");
 		return (1);
-	printf("%s", str);
+	}
+	printf("str = %s\n", str);
 	return (0);
-}
- */
+} */

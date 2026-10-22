@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	size(long n)
+static int	check_size(long long n)
 {
 	int	i;
 
@@ -22,6 +22,7 @@ int	size(long n)
 	if (n < 0)
 	{
 		n *= -1;
+		i++;
 	}
 	while (n > 0)
 	{
@@ -31,47 +32,54 @@ int	size(long n)
 	return (i);
 }
 
-char	*convert_to_str(char *str, long n_cpy, int i)
+static char	*convert_to_str(char *str, long long n, int i)
 {
-	if (n_cpy == 0)
+	if (n < 0)
 	{
-		str[0] = '0';
-		return (str);
-	}
-	if (n_cpy < 0)
-	{
+		n *= -1;
 		str[0] = '-';
-		n_cpy *= -1;
 	}
-	while (n_cpy > 0)
+	while (n > 0)
 	{
-		str[i--] = n_cpy % 10 + '0';
-		n_cpy /= 10;
+		str[i] = n % 10 + '0';
+		//printf("pos : %d\n", i);
+		n /= 10;
+		i--;
 	}
 	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
-	long	n_cpy;
+	char		*str;
+	int			size;
+	long long	n_cpy;
 
-	n_cpy = n;
-	i = size(n_cpy);
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	if (!str)
-		return (NULL);
-	str[i--] = '\0';
-	return (convert_to_str(str, n_cpy, i));
+	//printf("n : %d\n", n);
+	n_cpy = (long) n;
+	if (n_cpy == 0)
+	{
+		str = malloc(sizeof(char) * 2);
+		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
+	size = check_size(n_cpy);
+	//printf("size : %d\n", size); //correct with '-' to
+	str = malloc(sizeof(char) * (size + 1));
+	str = convert_to_str(str, n_cpy, size - 1);
+	//printf("str : %s\n", str);
+	str[size] = '\0';
+	//printf("str : %s\n", str);
+	return (str);
 }
 
 /* int	main(void)
 {
-	int n = -1234;
+	int n = 2;
 	char *str = ft_itoa(n);
 
-	printf("str = %s\n", str);
+	//printf("str = %s\n", str);
 	return (0);
 } */
 /*
